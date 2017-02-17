@@ -1,0 +1,38 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    
+    <xsd:element name="ehr">
+        <xsd:complexType>
+            <xsd:all>
+                <xsd:element name="patient_id" type="xsd:string"/>
+                <xsd:element name="patient_name" type="xsd:string"/>
+                <xsd:element ref="data_type"/>
+            </xsd:all>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:element name="data_type">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="data_name" type="data_type_name"/>
+                <xsd:element name="elements" type="data_elements"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:simpleType name="data_type_name">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="sexual_health"/>
+            <xsd:enumeration value="mental_health"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:complexType name="data_elements">
+        <xsd:sequence>
+            <xsd:element name="id" type="xsd:string"/>
+            <xsd:element name="name" type="xsd:string"/>
+            <xsd:element name="description" type="xsd:string"/>
+            <xsd:element name="details" type="xsd:string"/>
+        </xsd:sequence>
+    </xsd:complexType>
+    
+</xsd:schema>

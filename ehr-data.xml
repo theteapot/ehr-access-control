@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ehr xmlns:xsi="ehr-schema.xsd">
+        <patient_name>TaylorKettle</patient_name>
+        <patient_id>1`875igslwo1pa</patient_id>
+        <data_type>
+            <data_name>sexual_health</data_name>
+            <elements>
+                <id>d1</id>
+                <name>Address</name>
+                <description>Where the person lives</description>
+                <details>295 Wainui rd, Silverdale, Auckland, 0992, New Zealand</details>
+            </elements>
+        </data_type>
+</ehr>
+       
